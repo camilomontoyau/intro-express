@@ -1,4 +1,23 @@
 extends layout.pug
 
 block content
-    h1#dashboard-title Hola mundo con pug!
+    h1#dashboard-title crear mascota
+    form(action="POST")
+        .form-group
+            label(for='propietario') Nombre Propietario
+            input#propietario.form-control(type='text', placeholder='Propietario')
+        .form-group
+            label(for='mascota') Nombre Mascota
+            input#mascota.form-control(type='text', placeholder='Propietario')
+        .form-group
+            label(for='email') Email
+            input#email.form-control(type='email', placeholder='Email')
+        .form-group
+            label(for='tipo') Tipo de mascota
+            select#tipo.form-control
+                option(value="", disabled=true) seleccione
+                option(value="perro") perro
+                option(value="gato") gato
+                option(value="tortuga") tortuga
+                option(value="onitorrinco") onitorrinco
+        button.btn.btn-default(type='submit') Submit
