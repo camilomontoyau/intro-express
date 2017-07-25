@@ -32,7 +32,13 @@ app.post('/', (req, res) => {
 });
 
 app.get('/mascotas', (req, res) => {
-	return res.render('home');
+	let schema = MascotaSchema;
+	schema.find((err, mascotas)=>{
+    if(err) {
+      return res.send(err);
+    }
+		return res.render('mascotas', {mascotas});
+	});
 });
 
 let port = 3000;

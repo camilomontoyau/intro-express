@@ -1,0 +1,23 @@
+extends layout.pug
+
+block content
+    h1#dashboard-title mascotas
+    .row
+        .col-lg-2
+            h3 propietario
+        .col-lg-2
+            h3 mascota
+        .col-lg-2
+            h3 email
+        .col-lg-2
+            h3 tipo
+    if mascotas && mascotas.length > 0
+        each mascota in mascotas
+            .row
+                .col-lg-2 #{mascota.propietario}
+                .col-lg-2 #{mascota.mascota}
+                .col-lg-2 #{mascota.email}
+                .col-lg-2 #{mascota.tipo}
+    else
+        .row
+            .col-lg-12 No se encontraron mascotas
