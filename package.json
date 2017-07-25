@@ -18,6 +18,7 @@
   "homepage": "https://github.com/nodejs-medellin/intro-express#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "mongoose": "^4.11.4"
+    "mongoose": "^4.11.4",
+    "pug": "^2.0.0-rc.2"
   }
 }
