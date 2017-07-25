@@ -4,6 +4,9 @@ const app = express();
 const viewDir = `${__dirname}/views`;
 const mongoose = require('mongoose');
 const connection = mongoose.connect('mongodb://localhost/mismascotas');
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
 
 app.set( 'views', viewDir );
 app.set( 'view engine', 'pug');
