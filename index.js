@@ -1,9 +1,13 @@
 'use strict';
 const express = require('express');
 const app = express();
+const viewDir = `${__dirname}/views`;
+
+app.set( 'views', viewDir );
+app.set( 'view engine', 'pug');
 
 app.get('/', (req, res) => {
-	return res.send('Por qué debo poner hola mundo?');
+	return res.render('home');
 });
 
 let port = 3000;
